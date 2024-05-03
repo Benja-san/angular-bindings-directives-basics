@@ -1,0 +1,33 @@
+<ul>
+  @for(product of noPriceProducts; track product.id) {
+  <li>
+    {{ product.name }},
+    {{ product.isDiscount ? "on sales" : "" }}
+  </li>
+  }
+</ul>
+<br />
+<br />
+<br />
+<br />
+<br />
+<ul>
+  @for(product of onSalesProducts; track product.id) {
+  <li>
+    {{ product.name }}, {{ product.price ? "€" + product.price : "" }} On sales
+  </li>
+  }
+</ul>
+<br />
+<br />
+<br />
+<br />
+<br />
+<ul>
+  @for(product of noSaleswithPriceProducts; track product.id) {
+  <li>
+    {{ product.name }}, {{ product.price ? "€" + product.price : "" }}
+    {{ product.isDiscount ? "on sales" : "" }}
+  </li>
+  }
+</ul>

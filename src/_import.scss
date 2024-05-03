@@ -1,0 +1,7 @@
+$mainColor: red;
+
+@mixin cardLayout {
+  padding: 1rem;
+  box-shadow: -4px 4px 12px black;
+  width: clamp(250px, 30%, 400px);
+}

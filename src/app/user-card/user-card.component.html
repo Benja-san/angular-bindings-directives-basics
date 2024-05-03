@@ -1,0 +1,14 @@
+@for (user of users; track user.id) {
+<article class="card">
+  <div class="pictureContainer">
+    <img [src]="user.image" [alt]="user.title" />
+  </div>
+  <h2>Hello {{ user.title }}</h2>
+  <h3>Age : {{ user.age }}</h3>
+  <section>
+    <label for="quote">Quote</label>
+    <p>{{ user.quote }}</p>
+    <input [(ngModel)]="user.quote" type="text" name="quote" id="quote" />
+  </section>
+</article>
+}
